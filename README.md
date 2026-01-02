@@ -139,7 +139,7 @@ A dataclass-based async Redis client with automatic connection management.
 ## Requirements
 
 - Python 3.8+
-- redis >= 7.0.0
+- redis >= 7.1.0
 
 **Note:** `python-dotenv` is included in `requirements.txt` for test configuration support, but it's only required if you're running tests. For production use, only `redis` is required.
 

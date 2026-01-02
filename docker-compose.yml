@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: boilerplates-redis-test
+    env_file:
+      - .env.test
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    command: >
+      sh -c "
+      if [ -n \"$$REDIS_PASSWORD\" ]; then
+        redis-server --appendonly yes --requirepass $$REDIS_PASSWORD
+      else
+        redis-server --appendonly yes
+      fi
+      "
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: >
+        sh -c "
+        if [ -n \"$$REDIS_PASSWORD\" ]; then
+          redis-cli -a $$REDIS_PASSWORD ping
+        else
+          redis-cli ping
+        fi
+        "
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  redis-data:
+

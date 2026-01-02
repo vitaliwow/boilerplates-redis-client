@@ -16,13 +16,13 @@ A lightweight async Redis client wrapper for Python with automatic connection ma
 Install directly from GitHub:
 
 ```bash
-pip install git+https://github.com/vitaliywow/boilerplates-redis-client.git
+pip install git+https://github.com/vitaliwow/boilerplates-redis-client.git
 ```
 
 Or install from a specific branch/tag:
 
 ```bash
-pip install git+https://github.com/vitaliywow/boilerplates-redis-client.git@main
+pip install git+https://github.com/vitaliwow/boilerplates-redis-client.git@main
 ```
 
 ## Quick Start

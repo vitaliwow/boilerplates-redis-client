@@ -39,9 +39,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/vitaliywow/boilerplates-redis-client"
-Repository = "https://github.com/vitaliywow/boilerplates-redis-client"
-Issues = "https://github.com/vitaliywow/boilerplates-redis-client/issues"
+Homepage = "https://github.com/vitaliwow/boilerplates-redis-client"
+Repository = "https://github.com/vitaliwow/boilerplates-redis-client"
+Issues = "https://github.com/vitaliwow/boilerplates-redis-client/issues"
 
 [tool.setuptools]
 packages = ["boilerplates_redis_client"]
